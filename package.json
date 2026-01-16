@@ -1,10 +1,11 @@
 {
   "name": "polymarket-copy-bot",
   "version": "1.0.0",
-  "type": "module",
-  "main": "src/index.ts",
+  "type": "commonjs",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node --loader ts-node/esm src/index.ts"
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@polymarket/clob-client": "^4.0.0",
@@ -14,7 +15,6 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
 }
